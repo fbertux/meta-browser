@@ -80,7 +80,7 @@ SRC_URI = "ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/source/f
 SRC_URI[archive.md5sum] = "aced0ee58484b433f4748111d59c9df2"
 SRC_URI[archive.sha256sum] = "85eb5f916aa47a92cf50803dcb35e7fa3a9da29abf5fc91cbb6a70bbbc2618ff"
 
-S = "${WORKDIR}/mozilla-esr10"
+S = "${WORKDIR}/mozilla-esr38"
 
 inherit mozilla
 
