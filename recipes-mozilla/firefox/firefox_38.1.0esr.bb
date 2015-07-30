@@ -11,7 +11,9 @@ LIC_FILES_CHKSUM = "file://toolkit/content/license.html;endline=39;md5=f7e14664a
 SRC_URI = "ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/source/firefox-${PV}.source.tar.bz2;name=archive \
            file://mozilla-${BPN}.png \
            file://mozilla-${BPN}.desktop \
-           file://vendor.js"
+           file://vendor.js \
+           file://fix-python-path.patch \
+           "
 
 SRC_URI[archive.md5sum] = "aced0ee58484b433f4748111d59c9df2"
 SRC_URI[archive.sha256sum] = "85eb5f916aa47a92cf50803dcb35e7fa3a9da29abf5fc91cbb6a70bbbc2618ff"
