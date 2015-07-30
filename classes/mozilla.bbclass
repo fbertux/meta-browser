@@ -6,8 +6,7 @@ SRC_URI += "file://mozconfig"
 
 inherit gettext pkgconfig
 
-EXTRA_OECONF = "--target=${TARGET_SYS} --host=${BUILD_SYS} \
-                --build=${BUILD_SYS} --prefix=${prefix} --disable-elf-hack"
+EXTRA_OECONF = "--target=${TARGET_SYS} --prefix=${prefix}"
 SELECTED_OPTIMIZATION = "-Os -fsigned-char -fno-strict-aliasing"
 
 export CROSS_COMPILE = "1"
