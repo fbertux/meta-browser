@@ -16,6 +16,11 @@ export OBJDIR = "${S}/firefox-build-dir"
 export MOZ_OBJDIR = "${S}/firefox-build-dir"
 export FOUND_MOZCONFIG = "${WORKDIR}/mozconfig"
 
+export TARGET_SYS
+export STAGING_INCDIR
+export STAGING_LIBDIR
+export PKG_CONFIG_PATH
+
 export CONFIGURE_ARGS = "${EXTRA_OECONF}"
 export HOST_CC = "${BUILD_CC}"
 export HOST_CXX = "${BUILD_CXX}"
