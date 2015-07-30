@@ -10,8 +10,11 @@ EXTRA_OECONF = "--target=${TARGET_SYS} --prefix=${prefix}"
 SELECTED_OPTIMIZATION = "-Os -fsigned-char -fno-strict-aliasing"
 
 export CROSS_COMPILE = "1"
+
 export MOZCONFIG = "${WORKDIR}/mozconfig"
-export MOZ_OBJDIR = "${S}"
+export OBJDIR = "${S}/firefox-build-dir"
+export MOZ_OBJDIR = "${S}/firefox-build-dir"
+export FOUND_MOZCONFIG = "${WORKDIR}/mozconfig"
 
 export CONFIGURE_ARGS = "${EXTRA_OECONF}"
 export HOST_CC = "${BUILD_CC}"
