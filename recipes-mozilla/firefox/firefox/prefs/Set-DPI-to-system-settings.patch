@@ -1,0 +1,21 @@
+From f34128860e98cc012d7270465356681b284377c0 Mon Sep 17 00:00:00 2001
+From: Mike Hommey <glandium@debian.org>
+Date: Thu, 13 Mar 2008 20:30:19 +0100
+Subject: Set DPI to system settings
+
+
+diff --git a/modules/libpref/init/all.js b/modules/libpref/init/all.js
+index b0c3c6f..74a71b1 100644
+--- a/modules/libpref/init/all.js
++++ b/modules/libpref/init/all.js
+@@ -2064,7 +2064,7 @@ pref("layout.css.visited_links_enabled", true);
+ // A value of 0 means use the system DPI. A positive value is used as the DPI.
+ // This sets the physical size of a device pixel and thus controls the
+ // interpretation of physical units such as "pt".
+-pref("layout.css.dpi", -1);
++pref("layout.css.dpi", 0);
+ 
+ // Set the number of device pixels per CSS pixel. A value <= 0 means choose
+ // automatically based on user settings for the platform (e.g., "UI scale factor"
+-- 
+cgit v0.10.2

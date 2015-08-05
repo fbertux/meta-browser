@@ -1,0 +1,22 @@
+From ca94ffb3fb77470a285f22e7e1e8d1d42117efb5 Mon Sep 17 00:00:00 2001
+From: Mike Hommey <mh@glandium.org>
+Date: Wed, 25 Feb 2015 10:41:37 +0900
+Subject: Make powerpc not use static page sizes in mozjemalloc
+
+Closes: #763900
+
+diff --git a/memory/mozjemalloc/jemalloc.c b/memory/mozjemalloc/jemalloc.c
+index 3681792..621f5ba 100644
+--- a/memory/mozjemalloc/jemalloc.c
++++ b/memory/mozjemalloc/jemalloc.c
+@@ -1087,7 +1087,7 @@ static const bool config_recycle = false;
+  * controlling the malloc behavior are defined as compile-time constants
+  * for best performance and cannot be altered at runtime.
+  */
+-#if !defined(__ia64__) && !defined(__sparc__) && !defined(__mips__)
++#if !defined(__ia64__) && !defined(__sparc__) && !defined(__mips__) && !defined(__powerpc__)
+ #define MALLOC_STATIC_SIZES 1
+ #endif
+ 
+-- 
+cgit v0.10.2
