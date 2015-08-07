@@ -36,14 +36,15 @@ mozilla_do_configure() {
 		echo mk_add_options MOZ_MAKE_FLAGS=\"${PARALLEL_MAKE}\" \
 			>> ${MOZCONFIG}
 	fi
+    oe_runmake -f client.mk -s configure
 }
 
 mozilla_do_compile() {
-	oe_runmake -f client.mk build_all
+	oe_runmake -f client.mk build
 }
 
 mozilla_do_install() {
-	oe_runmake DESTDIR="${D}" destdir="${D}" install
+	oe_runmake -f client.mk DESTDIR="${D}" INSTALL_SDK= install
 }
 
 EXPORT_FUNCTIONS do_configure do_compile do_install
