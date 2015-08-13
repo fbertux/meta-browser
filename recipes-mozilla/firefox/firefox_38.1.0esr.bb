@@ -37,8 +37,6 @@ SRC_URI = "ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/source/f
            file://debian-hacks/Handle-transition-to-etc-appname-searchplugins.patch \
            file://debian-hacks/Preprocess-appstrings.properties.patch \
            file://debian-hacks/Disable-Firefox-Health-Report.patch \
-           file://debian-hacks/Add-debian-extra-stuff-to-upstream-build-system.patch \
-           file://debian-hacks/Make-upstream-build-system-create-debian-installer.patch \
            file://debian-hacks/Bump-search-engine-max-icon-size-to-35kB.patch \
            file://debian-hacks/NSS-Adds-the-SPI-Inc.-and-CAcert.org-CA-certificates.patch \
            file://debian-hacks/Work-around-binutils-assertion-on-mips.patch \

@@ -36,6 +36,8 @@ mozilla_do_configure() {
 		echo mk_add_options MOZ_MAKE_FLAGS=\"${PARALLEL_MAKE}\" \
 			>> ${MOZCONFIG}
 	fi
+    # Preserve configure.in timestamp to avoid autoconf be executed.
+    touch -t 06241828 configure.in
     oe_runmake -f client.mk -s configure
 }
 
