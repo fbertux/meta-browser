@@ -11,8 +11,7 @@ OLDCWD=$PWD
 
 cd $TMPDIR
 echo "Downloading XPI files..."
-wget -c ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/$1/linux-i686/xpi/*.xpi
-
+wget -np -nH -r --cut-dirs 7 -A "*.xpi" http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/38.1.0esr/linux-i686/xpi/
 cd $OLDCWD
 
 for f in $TMPDIR/*.xpi; do
