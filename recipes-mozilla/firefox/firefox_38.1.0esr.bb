@@ -60,3 +60,5 @@ inherit mozilla
 EXTRA_OEMAKE = "installdir=${libdir}/${PN}"
 
 ARM_INSTRUCTION_SET = "arm"
+
+INSANE_SKIP_${PN} = "already-stripped"
